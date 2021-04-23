@@ -66,8 +66,9 @@
 <meta property="og:image" content="https://gitee.com/blackant-club/blogimage/raw/master/images/63.png">
 <meta property="og:image" content="https://gitee.com/blackant-club/blogimage/raw/master/images/64.png">
 <meta property="og:image" content="https://gitee.com/blackant-club/blogimage/raw/master/images/65.png">
+<meta property="og:image" content="https://gitee.com/blackant-club/blogimage/raw/master/images/66.png">
 <meta property="article:published_time" content="2021-04-21T09:08:20.000Z">
-<meta property="article:modified_time" content="2021-04-23T10:57:10.018Z">
+<meta property="article:modified_time" content="2021-04-23T11:20:30.499Z">
 <meta property="article:author" content="Ryan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/blackant-club/blogimage/raw/master/images/1.png">
@@ -231,7 +232,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-23 18:57:10" itemprop="dateModified" datetime="2021-04-23T18:57:10+08:00">2021-04-23</time>
+        <time title="Modified: 2021-04-23 19:20:30" itemprop="dateModified" datetime="2021-04-23T19:20:30+08:00">2021-04-23</time>
       </span>
 
   
@@ -412,7 +413,7 @@
 <li><p>配置SSH Key</p>
 <ul>
 <li><p>创建SSH密钥：</p>
-<p>输入ssh-keygen -t rsa -C “<a href="mailto:&#114;&#x79;&#97;&#110;&#x6c;&#x65;&#97;&#99;&#110;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#109;">&#114;&#x79;&#97;&#110;&#x6c;&#x65;&#97;&#99;&#110;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#109;</a>“（需要换成你的注册邮箱地址），然后一路回车</p>
+<p>输入ssh-keygen -t rsa -C “<a href="mailto:&#114;&#x79;&#97;&#110;&#x6c;&#x65;&#x61;&#99;&#110;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;">&#114;&#x79;&#97;&#110;&#x6c;&#x65;&#x61;&#99;&#110;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;</a>“（需要换成你的注册邮箱地址），然后一路回车</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20.png" alt="20"></p>
 </li>
 <li><p>添加密钥：</p>
@@ -426,7 +427,7 @@
 </ul>
 <ul>
 <li><p>验证连接：</p>
-<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;</a>回车（固定格式），如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：Hi blackant-club! You’ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！（设置GitHub密钥原因是：通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥和GitHub上面的公钥是否配对，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是合法的）</p>
+<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>回车（固定格式），如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：Hi blackant-club! You’ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！（设置GitHub密钥原因是：通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥和GitHub上面的公钥是否配对，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是合法的）</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/23.png" alt="23"></p>
 </li>
 </ul>
@@ -436,7 +437,7 @@
 <li><p>打开D:\Blog下的_config.yml文件（站点配置文件），下拉到底部，将原来的：</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/24.png" alt="24"></p>
 </li>
-<li><p>修改成：（注意：冒号后面有空格！格式为：<a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#111;&#x6d;</a>:blackant-club/blackant-club.github.io.git，关闭保存。</p>
+<li><p>修改成：（注意：冒号后面有空格！格式为：<a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;</a>:blackant-club/blackant-club.github.io.git，关闭保存。</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/45.png" alt="45"></p>
 </li>
 <li><p>有的朋友可能找不到这个git@xxxxxx，只需点击网站左上角你的仓库，然后会跳转到新的页面，按照下图顺序操作即可复制</p>
@@ -572,9 +573,11 @@
 </li>
 <li><p>hexo d</p>
 </li>
-<li><p>浏览器地址栏输入博客网址：</p>
+<li><p>浏览器地址栏输入博客网址：<a target="_blank" rel="noopener" href="https://blackant-club.github.io/%EF%BC%8C%E5%A6%82%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%8C%E5%9B%BE%E7%89%87%E5%B7%B2%E6%98%BE%E7%A4%BA%EF%BC%81">https://blackant-club.github.io/，如图所示，图片已显示！</a></p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/66.png"></p>
 </li>
 </ol>
+<p>至此基于Hexo+GitHub搭建个人独立博客教程结束。目前来看，博客还相当简陋，下一步想进行一些美化，我很期待！</p>
 
     </div>
 
