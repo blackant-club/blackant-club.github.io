@@ -18,6 +18,8 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet"><meta name="description" content="前言:自3月5日公众号停更至今已经两个多月了，期间不少朋友在后台询问，这里跟大家解释一下：随着版权的越来越严格，年后不少软件分享网站、公众号被关停，稍不留意就会收到律师函。细心的朋友可能早就发现，之前破解版的PS一搜一大堆，可如今是一个也找不到的，估计日后想在网上获取破解软件会越来越难。不过请大家放心，你若不离，我便不弃，大家有什么软件方面的需求，可在公众号后台反馈，小黑会私发给大家。虽然最近没有">
@@ -53,8 +55,9 @@
 <meta property="og:image" content="https://i.loli.net/2021/05/10/nslOvocf786F9ML.png">
 <meta property="og:image" content="https://i.loli.net/2021/05/10/RNSqxIHlov1gfUi.png">
 <meta property="og:image" content="https://i.loli.net/2021/05/10/E8MT3k4w2IHh9Ql.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/OkEbYBsJ8XImdRe.png">
 <meta property="article:published_time" content="2021-05-06T07:21:48.000Z">
-<meta property="article:modified_time" content="2021-05-10T08:56:16.600Z">
+<meta property="article:modified_time" content="2021-05-10T09:55:19.211Z">
 <meta property="article:author" content="Ryan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/blackant-club/blogimage/raw/master/images/Snipaste_2021-05-07_17-36-48.png">
@@ -251,7 +254,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-10 16:56:16" itemprop="dateModified" datetime="2021-05-10T16:56:16+08:00">2021-05-10</time>
+        <time title="Modified: 2021-05-10 17:55:19" itemprop="dateModified" datetime="2021-05-10T17:55:19+08:00">2021-05-10</time>
       </span>
 
   
@@ -435,6 +438,15 @@
 </li>
 </ul>
 </li>
+<li><p>添加顶部加载条：</p>
+<ul>
+<li><p>打开D:\Blog\themes\next文件夹，鼠标右键Git Bash Here，下载安装Progress module，输入命令git clone <a target="_blank" rel="noopener" href="https://github.com/theme-next/theme-next-pace">https://github.com/theme-next/theme-next-pace</a> source/lib/pace，见下图：</p>
+<p><img src="https://i.loli.net/2021/05/10/OkEbYBsJ8XImdRe.png"></p>
+</li>
+<li><p>打开D:\Blog\themes\next文件下的_config.yml文件（主题配置文件），</p>
+</li>
+</ul>
+</li>
 <li></li>
 </ol>
 
@@ -503,6 +515,8 @@
 
 
 
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
 
   
 
