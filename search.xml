@@ -38,7 +38,7 @@
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/Snipaste_2021-05-07_19-02-18.png"></p>
 </li>
 <li><p>Sidebar Avatar设置头像</p>
-<p>将头像放置在博客根目录下的source/images/ （新建images目录若不存在）配置为：url: /images/文件名</p>
+<p>将头像放置在博客根目录下的source/images/ （新建images目录若不存在）配置为：url: /images/文件名。如果想让头像变成圆形（前提是你的图片是正方形，长方形的话会变成椭圆），将rounded: false改成true，然后关闭保存即可。</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/Snipaste_2021-05-07_19-23-54.png"></p>
 </li>
 <li><p>还有几个设定不是很重要，但也可以设置一下。比如添加一个内容已经查看的百分比（浏览进度），默认位置在窗口右下角，如果想将其放在侧边栏显示，可将sidebar的值设为true，然后关闭保存。</p>
@@ -112,8 +112,9 @@
 </li>
 <li><p>设置头像动态特效：</p>
 <ul>
-<li><p>第一种旋转效果：打开D:\Blog\themes\next\source\css_common\outline\sidebar\sidebar-author.styl文件，添加如下代码，然后关闭窗口保存。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.site-author-image</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">padding</span>: $site-author-image-padding;</span><br><span class="line">  <span class="attribute">max-width</span>: $site-author-image-width;</span><br><span class="line">  <span class="attribute">height</span>: $site-author-image-height;</span><br><span class="line">  <span class="attribute">border</span>: $site-author-image-border-width solid $site-author-image-border-color;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 头像圆形 */</span></span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">80px</span>;</span><br><span class="line">  -webkit-<span class="attribute">border-radius</span>: <span class="number">80px</span>;</span><br><span class="line">  -moz-<span class="attribute">border-radius</span>: <span class="number">80px</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> -<span class="number">1px</span> <span class="number">0</span> <span class="number">#333</span>sf;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 设置循环动画 [animation: (play)动画名称 (2s)动画播放时长单位秒或微秒 (ase-out)动画播放的速度曲线为以低速结束 </span></span><br><span class="line"><span class="comment">    (1s)等待1秒然后开始动画 (1)动画播放次数(infinite为循环播放) ]*/</span></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 鼠标经过头像旋转360度 */</span></span><br><span class="line">  -webkit-<span class="attribute">transition</span>: -webkit-transform <span class="number">1.0s</span> ease-out;</span><br><span class="line">  -moz-<span class="attribute">transition</span>: -moz-transform <span class="number">1.0s</span> ease-out;</span><br><span class="line">  <span class="attribute">transition</span>: transform <span class="number">1.0s</span> ease-out;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">img</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="comment">/* 鼠标经过停止头像旋转 </span></span><br><span class="line"><span class="comment">  -webkit-animation-play-state:paused;</span></span><br><span class="line"><span class="comment">  animation-play-state:paused;*/</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 鼠标经过头像旋转360度 */</span></span><br><span class="line">  -webkit-<span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(<span class="number">360deg</span>);</span><br><span class="line">  -moz-<span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(<span class="number">360deg</span>);</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(<span class="number">360deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Z 轴旋转动画 */</span></span><br><span class="line"><span class="keyword">@-webkit-keyframes</span> play &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;</span><br><span class="line">    -webkit-<span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(<span class="number">0deg</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    -webkit-<span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(-<span class="number">360deg</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@-moz-keyframes</span> play &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;</span><br><span class="line">    -moz-<span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(<span class="number">0deg</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    -moz-<span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(-<span class="number">360deg</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@keyframes</span> play &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(<span class="number">0deg</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(-<span class="number">360deg</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>第一种旋转效果：打开主题配置文件，搜索Sidebar Avatar，将rotated: false改成true，然后关闭窗口保存。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210518193211.png"></p>
+</li>
 <li><p>第二种震动效果（分两个步骤）：</p>
 <ol>
 <li><p>打开D:\Blog\themes\next\layout_partials\head\head.njk文件，在末行添加如下代码，然后关闭保存。</p>
@@ -303,7 +304,7 @@
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210518175956.png"></p>
 </li>
 <li><p>找到这个index.md的文件，将其后缀md改为html，然后将其打开，在date: 2021-05-18 17:55:11下面添加两行代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">腾讯公益404界面comments: false</span><br><span class="line">permalink: /404</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">comments: false</span><br><span class="line">permalink: /404</span><br></pre></td></tr></table></figure></li>
 <li><p>如图所示：</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210518181436.png"></p>
 </li>
@@ -312,9 +313,21 @@
 <li><p>注意：需要将标记的位置换成你自己的网址，如图所示：</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210518172544.png"></p>
 </li>
-<li><p>hexo d -g进行部署（hexo g  hexo d 命令的简写），</p>
+<li><p>hexo d -g进行部署（hexo g  hexo d 命令的简写），效果图：</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210518183101.png"></p>
 </li>
 </ul>
+</li>
+<li><p>统计浏览次数（本站总访客数，本站总访问量）：</p>
+<ul>
+<li>打开D:\Blog\themes\next\layout_partials\footer.njk文件，复制粘贴如下代码，然后关闭保存。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;powered-by&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-user-md&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_uv&quot;</span>&gt;</span></span><br><span class="line">本站总访客数:<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_uv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>| </span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_pv&quot;</span>&gt;</span></span><br><span class="line">  <span class="symbol">&amp;nbsp;</span>本站总访问量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_pv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>实际操作如图：</li>
+</ul>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210518200952.png"></p>
 </li>
 <li></li>
 </ol>
@@ -491,7 +504,7 @@
 <li><p>配置SSH Key</p>
 <ul>
 <li><p>创建SSH密钥：</p>
-<p>输入ssh-keygen -t rsa -C “<a href="mailto:&#x72;&#121;&#97;&#110;&#108;&#x65;&#x61;&#99;&#x6e;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#x72;&#121;&#97;&#110;&#108;&#x65;&#x61;&#99;&#x6e;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a>“（需要换成你的注册邮箱地址），然后一路回车</p>
+<p>输入ssh-keygen -t rsa -C “<a href="mailto:&#114;&#121;&#97;&#x6e;&#x6c;&#x65;&#97;&#99;&#110;&#x40;&#111;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#114;&#121;&#97;&#x6e;&#x6c;&#x65;&#97;&#99;&#110;&#x40;&#111;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a>“（需要换成你的注册邮箱地址），然后一路回车</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20.png" alt="20"></p>
 </li>
 <li><p>添加密钥：</p>
@@ -505,7 +518,7 @@
 </ul>
 <ul>
 <li><p>验证连接：</p>
-<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;</a>回车（固定格式），如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：Hi blackant-club! You’ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！（设置GitHub密钥原因是：通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥和GitHub上面的公钥是否配对，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是合法的）</p>
+<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;</a>回车（固定格式），如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：Hi blackant-club! You’ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！（设置GitHub密钥原因是：通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥和GitHub上面的公钥是否配对，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是合法的）</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/23.png" alt="23"></p>
 </li>
 </ul>
@@ -515,7 +528,7 @@
 <li><p>打开D:\Blog下的_config.yml文件（站点配置文件），下拉到底部，将原来的：</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/24.png" alt="24"></p>
 </li>
-<li><p>修改成：（注意：冒号后面有空格！格式为：<a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#111;&#x6d;">&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#111;&#x6d;</a>:blackant-club/blackant-club.github.io.git，关闭保存。</p>
+<li><p>修改成：（注意：冒号后面有空格！格式为：<a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#116;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>:blackant-club/blackant-club.github.io.git，关闭保存。</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/45.png" alt="45"></p>
 </li>
 <li><p>有的朋友可能找不到这个git@xxxxxx，只需点击网站左上角你的仓库，然后会跳转到新的页面，按照下图顺序操作即可复制</p>
