@@ -338,7 +338,15 @@
 </li>
 </ul>
 </li>
-<li></li>
+<li><p>给博客添加RSS订阅（公众号）：</p>
+<p>RSS即Really Simple Syndication（简易信息聚合），是站点用来和其他站点之间共享内容的一种简易方式，用它可以把自己写的博客推送给读者。如果自己的博客没有添加 rss 那么大家需要打开博客才可以发现你写了新的文章，所以建议在博客中添加。</p>
+<ul>
+<li>首选先安装这个包，键入npm install hexo-generator-feed –save回车</li>
+<li>此时你会发现D:\Blog\public文件夹下多出一个rss3.xml文件</li>
+<li>打开主题配置文件，搜索follow_me，将默认的RSS：前面的#号去掉，关闭保存。（如果想添加公众号，可将WeChat：前面的#号去掉，不过需要公众号图片）</li>
+<li>执行hexo d -g部署到网站，查看效果 ：</li>
+</ul>
+</li>
 <li></li>
 </ol>
 ]]></content>
