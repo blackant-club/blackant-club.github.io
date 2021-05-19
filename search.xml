@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2021/04/21/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>GitHub博客(NexT主题)优化篇</title>
     <url>/2021/05/06/GitHub%E5%8D%9A%E5%AE%A2-NexT%E4%B8%BB%E9%A2%98-%E4%BC%98%E5%8C%96%E7%AF%87/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h3><p>自3月5日公众号停更至今已经两个多月了，期间不少朋友在后台询问，这里跟大家解释一下：随着版权的越来越严格，年后不少软件分享网站、公众号被关停，稍不留意就会收到律师函。细心的朋友可能早就发现，之前破解版的PS一搜一大堆，可如今是一个也找不到的，估计日后想在网上获取破解软件会越来越难。<span id="more"></span>不过请大家放心，你若不离，我便不弃，大家有什么软件方面的需求，可在公众号后台反馈，小黑会私发给大家。虽然最近没有推文，小黑也没闲着，捣鼓了一个个人博客网站（基于Hexo+GitHub搭建的免费个人博客，好处是只要有网络，随时随地发文，无需审查），欢迎大家的访问，友情链接：<a href="https://blackant-club.github.io/">蚂蚁小黑</a></p>
-<p>既然有了属于自己的博客网站，强迫症的我怎能不让其更加美观呢，于是乎就有了今天的第二篇博客推文。<a href="http://theme-next.iissnan.com/">NexT</a> 是 Github上Star最多的主题，精于心，简于形，并且一直在更新维护，支持非常多的外部插件和功能选项。NexT的主题下载安装和配置在上篇文中已有说明，这里就不赘述，下面直奔主题-优化</p>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h3><p>自3月5日公众号停更至今已经两个多月了，期间不少朋友在后台询问，这里跟大家解释一下：随着版权的越来越严格，年后不少软件分享网站、公众号被关停，稍不留意就会收到律师函。之前破解版的PS一搜一大堆，可如今是一个也找不到了，估计日后想在网上获取破解软件会越来越难。<span id="more"></span>不过请大家放心，你若不离，我便不弃，大家有什么软件方面的需求，可在公众号后台反馈，小黑会私发给大家。虽然最近没有推文，小黑也没闲着，捣鼓了一个个人博客网站（基于Hexo+GitHub搭建的免费个人博客，好处是只要有网络，随时随地发文，无需审查），欢迎大家的访问，友情链接：<a href="https://blackant-club.github.io/">蚂蚁小黑</a></p>
+<p>既然有了属于自己的博客网站，怎能不让其更加美观呢，于是乎就有了今天的第二篇博客推文。<a href="http://theme-next.iissnan.com/">NexT</a> 是 Github上Star最多的主题，精于心，简于形，并且一直在更新维护，支持非常多的外部插件和功能选项。NexT的主题下载安装和配置在上篇文中已有说明，这里就不赘述，下面直奔主题-优化</p>
 <h3 id="优化："><a href="#优化：" class="headerlink" title="优化："></a>优化：</h3><p>首先定义好哪个是站点配置文件（如：D:\Blog_config.yml）,哪个是主题配置文件（如：D:\Blog\themes\next_config.yml）,不要搞混！</p>
 <ol>
 <li><p>设置菜单：</p>
@@ -70,7 +90,7 @@
 <li><p>效果图：</p>
 <p><img src="https://i.loli.net/2021/05/08/rliyDSPAYsx62nM.png"></p>
 </li>
-<li><p>经过几天的摸索，发现一个更直接的办法：打开主题配置文件，ctrl+f搜索github_banner，将原来enable: false改为true，将permalink: <a href="https://blackant-club.github.io修改成你自己的博客网址即可.(如果用此法,需要删除之前下载和添加的代码,否则会重复)/">https://blackant-club.github.io修改成你自己的博客网址即可。（如果用此法，需要删除之前下载和添加的代码，否则会重复）</a></p>
+<li><p>经过几天的摸索，发现一个更直接的办法：打开主题配置文件，ctrl+f搜索github_banner，将原来enable: false改为true，将permalink: <a href="https://blackant-club.github.io/">https://blackant-club.github.io</a> 修改成你自己的博客网址即可。（如果用此法，需要删除之前下载和添加的代码，否则会重复）</p>
 <p><img src="https://i.loli.net/2021/05/10/axW9F8VKpYwoQ3U.png"></p>
 </li>
 </ul>
@@ -170,7 +190,7 @@
 <li><p>打开D:\Blog\themes\next\source\css_common\components\post下的post-body.styl文件，在最后一行增加代码：@import “my-post-copyright”，关闭保存。</p>
 <p><img src="https://i.loli.net/2021/05/12/klqRuIgfMNDweCX.png"></p>
 </li>
-<li><p>打开站点配置文件（D:\Blog下的_config.yml），将默认的url: <a href="http://example.com修改成你自己的网址，比如我的：url">http://example.com修改成你自己的网址，比如我的：url</a>: <a href="https://blackant-club.github.io/%EF%BC%8C%E5%85%B3%E9%97%AD%E4%BF%9D%E5%AD%98%EF%BC%8C%E5%A6%82%E5%9B%BE%EF%BC%9A">https://blackant-club.github.io/，关闭保存，如图：</a></p>
+<li><p>打开站点配置文件（D:\Blog下的_config.yml），将默认的url: <a href="http://example.com/">http://example.com</a> 修改成你自己的网址，比如我的：url: <a href="https://blackant-club.github.io/">https://blackant-club.github.io/</a> , 关闭保存，如图：</p>
 <p><img src="https://i.loli.net/2021/05/12/CSVYTOUXqb5vzjc.png"></p>
 </li>
 <li><p>如果要在该博文下面增加版权信息的显示，需要在 Markdown 中增加copyright: true的设置，见下图：</p>
@@ -659,26 +679,6 @@
 </li>
 </ol>
 <p>至此基于Hexo+GitHub搭建个人独立博客过程结束。目前来看，博客还相当简陋，下一步想进行一些美化，我很期待！希望这篇文章能给你一点点灵感与想法！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/04/21/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
 </search>
