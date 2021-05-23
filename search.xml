@@ -20,6 +20,86 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
   </entry>
   <entry>
+    <title>基于PicGo+GitHub搭建免费图床</title>
+    <url>/2021/05/22/%E5%9F%BA%E4%BA%8EPicGo-GitHub%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<p>在写第二篇博文的时候，有个章节介绍了如何利用PicGo+Gitee搭建免费图床，本想可以一劳永逸，但是在上传第50张图片时，出现报错，提示You can only upload 50 Images per week!（你一周只能上传50张图片），当时看了一下时间是周五，要等到下个周一才能继续上传，这谁受得了！于是萌生用PicGo+GitHub来搭建第二款免费图床的想法，不知是否可行，接下来让我们一起试试吧！</p>
+<hr>
+<h3 id="配置GitHub："><a href="#配置GitHub：" class="headerlink" title="配置GitHub："></a>配置GitHub：</h3><ol>
+<li><p>注册GitHub账号并登录，注册过程可参考我的博客<a href="https://blackant-club.github.io/">蚂蚁小黑</a>中的第一篇文章my_first_blog，这里略过。</p>
+</li>
+<li><p>创建一个新仓库用于存放图片。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143609.png"></p>
+</li>
+<li><p>如图自己起个仓库名，勾选public（必须的）和Add a README file，点击Create repository</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143639.png"></p>
+</li>
+<li><p>见下图，按照顺序点击：</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143659.png"></p>
+</li>
+<li><p>点击左边栏的Personal access tokens，再点击右边栏的Generate new token</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143720.png"></p>
+</li>
+<li><p>输入GitHub账号密码，填写Note，勾选repo，点击Generate token</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143807.png"></p>
+</li>
+<li><p>注意：生成的token只会在这里显示一次，所以记得单独保存下来哦！！！，至此，Github的配置完成。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522144055.png"></p>
+</li>
+</ol>
+<h3 id="配置PicGo："><a href="#配置PicGo：" class="headerlink" title="配置PicGo："></a>配置PicGo：</h3><ol>
+<li><p>下载安装<a href="https://github.com/Molunerfinn/PicGo/releases">PicGo</a>，选择picGo-Setup-XXX.exe下载软件安装包即可。注意：安装软件时选择仅为我安装，不要安装在C盘上！！！，否则后面上传图片总是失败，因为这个问题找了半天才发现是路径的问题！）</p>
+</li>
+<li><p>打开PicGo，点击左边栏的图床设置-GitHub图床进行设置：</p>
+<ul>
+<li>仓库名：[github用户名]/[新建的仓库名称]</li>
+<li>分支：2020.10.01开始，github的默认分支名变更为main</li>
+<li>设定token：第一步创建的token</li>
+<li>指定存储路径patch：可填可不填，如果想将图片上传到仓库的指定目录下，可以填写目录名加/，例如我设置的为img/</li>
+<li>设定自定义域名：这里统一用jsdelivr的CDN加速域名，<a href="https://cdn.jsdelivr.net/gh/[github%E7%94%A8%E6%88%B7%E5%90%8D]/[%E4%BB%93%E5%BA%93%E5%90%8D]@main">https://cdn.jsdelivr.net/gh/[github用户名]/[仓库名]@main</a> ，注意，此处的分支一定要填写@main，否则默认使用master分支。而现在github创建的默认分支名为main，如果不指定，则会出现图片不能上传的情况。</li>
+<li>至此，github+picGo的配置完成，可以在上传区进行图片上传了。</li>
+</ul>
+</li>
+<li><p>对于之前已经安装过PicGo的朋友，不需要重新安装，可打开PicGo点击图床设置，点击GitHub图床（之前选择的是gitee），然后按照上一步配置，见下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522151740.png"></p>
+</li>
+<li><p>关闭窗口，重新启动PicGo，此时PicGo已将原来的图床Gitee替换为GitHub图床，见下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522151928.png"></p>
+</li>
+<li><p>此时可以上传图片了，我的使用方法是：打开Typora，在文章中需要插入图片的地方，按快捷键ctrl+shift+i，然后选中要插入的图片即可上传。（此操作下：如果之前没打开PicGo，此时会自动打开，但不需要在PicGo中做任何操作，前提是需要配置好Typora）</p>
+</li>
+<li><p>配置完PicGo后却上传图片失败，可以参考以下方法解决：</p>
+<ul>
+<li><p>检查自定义域名是否正确</p>
+</li>
+<li><p>仓库名不要有空格</p>
+</li>
+<li><p>图片名字不要带有特殊符号，如：%、+、*、空格等</p>
+</li>
+<li><p>建议开启时间戳重命名，防止图片名字重复</p>
+</li>
+<li><p>PicGo应用不稳定因素，需重启应用</p>
+</li>
+<li><p>想删除不想要的图片（已上传完毕的图片），可点击PicGo左边栏的”相册“，最近上传的照片都在这里显示，不想要的照片，可通过点击”垃圾桶“图标进行删除，会一并删除保存在GitHub仓库中的这张图。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="配置Typora："><a href="#配置Typora：" class="headerlink" title="配置Typora："></a>配置Typora：</h3><p>关于配置Typora这里就略过，大家可在<a href="https://blackant-club.github.io/">蚂蚁小黑</a>中的第一篇文章my_first_blog中查看。至此所有配置完成（以后可以在图床设置中随意切换GitHub图床和Gitee图床使用），大家可以愉快的玩耍了！</p>
+<h3 id="备忘："><a href="#备忘：" class="headerlink" title="备忘："></a>备忘：</h3><ul>
+<li>查看所有已安装的 hexo 插件：npm ls -dept 0</li>
+<li>安装：npm install 插件名 –save （注意save前是两个-）</li>
+<li>卸载：npm uninstall 插件名 –save （注意save前是两个-）</li>
+<li>创建文章：hexo new “文章名”</li>
+<li>清理缓存：hexo clean</li>
+<li>创建静态网页：hexo g</li>
+<li>启动预览：hexo s</li>
+<li>关闭预览：ctrl+c</li>
+<li>上传服务器：hexo d</li>
+<li>创建静态网页并上传服务器：hexo d -g</li>
+</ul>
+<h3 id="致谢："><a href="#致谢：" class="headerlink" title="致谢："></a>致谢：</h3><p>感谢诸多大神们的文章，真的学到了很多，在这里由衷的感谢！虽然过程比较折腾，但满满的成就感！一个字“值”！</p>]]></content>
+  </entry>
+  <entry>
     <title>GitHub博客(NexT主题)优化篇</title>
     <url>/2021/05/06/GitHub%E5%8D%9A%E5%AE%A2-NexT%E4%B8%BB%E9%A2%98-%E4%BC%98%E5%8C%96%E7%AF%87/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h3><p>自3月5日公众号停更至今已经两个多月了，期间不少朋友在后台询问，这里跟大家解释一下：随着版权的越来越严格，年后不少软件分享网站、公众号被关停，稍不留意就会收到律师函。之前破解版的PS一搜一大堆，可如今是一个也找不到了，估计日后想在网上获取破解软件会越来越难。<span id="more"></span>不过请大家放心，你若不离，我便不弃，大家有什么软件方面的需求，可在公众号后台反馈，小黑会私发给大家。虽然最近没有推文，小黑也没闲着，捣鼓了一个个人博客网站（基于Hexo+GitHub搭建的免费个人博客，好处是只要有网络，随时随地发文，无需审查），欢迎大家的访问，友情链接：<a href="https://blackant-club.github.io/">蚂蚁小黑</a></p>
@@ -355,6 +435,29 @@
 <p>打开主题配置文件（D:\Blog\themes\next_config.yml）,搜索reward_settings，修改部分配置，注意：二维码放置路径为：D:\Blog\themes\next\source\images中，并确保图片名与_config.yml配置中的图片名一致。</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210520134402.png"></p>
 </li>
+<li><p>添加访客人数和总访问量（不蒜子计数）功能：</p>
+<ul>
+<li><p>打开主题配置文件，ctrl+f搜索busuanzi_count，将默认enable: false改为true，关闭保存。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522184309.png"></p>
+</li>
+<li><p>效果图：（备注：用hexo s部署在本地预览效果时，uv数和pv数会过大，这是由于不蒜子用户使用一个存储空间，所以使用localhost:4000进行本地预览时会导致数字异常，这是正常现象，只需要将博客部署至云端即可恢复正常。）</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522184843.png"></p>
+</li>
+</ul>
+</li>
+<li><p>添加网站运行时间：</p>
+<ul>
+<li><p>一个比较好的小功能，可以看见自己的博客运行多久了，随着时间一天天的增加，成就感也会一天天增加！打开D:\Blog\themes\next\layout_partials下的footer.njk文件，在末行添加如下代码，关闭保存。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;timeDate&quot;</span>&gt;</span>载入天数...<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;times&quot;</span>&gt;</span>载入时分秒...<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>(); </span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">createtime</span>(<span class="params"></span>) </span>&#123; </span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> grt= <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;08/10/2018 17:38:00&quot;</span>);<span class="comment">//在此处修改你的建站时间，格式：月/日/年 时:分:秒</span></span></span><br><span class="line">        now.setTime(now.getTime()+250); </span><br><span class="line"><span class="javascript">        days = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span>; dnum = <span class="built_in">Math</span>.floor(days); </span></span><br><span class="line"><span class="javascript">        hours = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> - (<span class="number">24</span> * dnum); hnum = <span class="built_in">Math</span>.floor(hours); </span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span>(<span class="built_in">String</span>(hnum).length ==<span class="number">1</span> )&#123;hnum = <span class="string">&quot;0&quot;</span> + hnum;&#125; minutes = (now - grt ) / <span class="number">1000</span> /<span class="number">60</span> - (<span class="number">24</span> * <span class="number">60</span> * dnum) - (<span class="number">60</span> * hnum); </span></span><br><span class="line"><span class="javascript">        mnum = <span class="built_in">Math</span>.floor(minutes); <span class="keyword">if</span>(<span class="built_in">String</span>(mnum).length ==<span class="number">1</span> )&#123;mnum = <span class="string">&quot;0&quot;</span> + mnum;&#125; </span></span><br><span class="line">        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); </span><br><span class="line"><span class="javascript">        snum = <span class="built_in">Math</span>.round(seconds); <span class="keyword">if</span>(<span class="built_in">String</span>(snum).length ==<span class="number">1</span> )&#123;snum = <span class="string">&quot;0&quot;</span> + snum;&#125; </span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">&quot;timeDate&quot;</span>).innerHTML = <span class="string">&quot;本站已安全运行 &quot;</span>+dnum+<span class="string">&quot; 天 &quot;</span>; </span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">&quot;times&quot;</span>).innerHTML = hnum + <span class="string">&quot; 小时 &quot;</span> + mnum + <span class="string">&quot; 分 &quot;</span> + snum + <span class="string">&quot; 秒&quot;</span>; </span></span><br><span class="line">    &#125; </span><br><span class="line"><span class="javascript"><span class="built_in">setInterval</span>(<span class="string">&quot;createtime()&quot;</span>,<span class="number">250</span>);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>实际操作如图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522201208.png"></p>
+</li>
+<li><p>预览效果：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522201537.png"></p>
+</li>
+</ul>
+</li>
 </ol>]]></content>
   </entry>
   <entry>
@@ -521,7 +624,7 @@
 <li><p>配置SSH Key</p>
 <ul>
 <li><p>创建SSH密钥：</p>
-<p>输入 ssh-keygen -t rsa -C “<a href="mailto:&#114;&#x79;&#97;&#110;&#x6c;&#x65;&#x61;&#x63;&#x6e;&#x40;&#111;&#x75;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;">&#114;&#x79;&#97;&#110;&#x6c;&#x65;&#x61;&#x63;&#x6e;&#x40;&#111;&#x75;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;</a>“ （需要换成你的注册邮箱地址），然后一路回车</p>
+<p>输入 ssh-keygen -t rsa -C “<a href="mailto:&#x72;&#121;&#x61;&#110;&#x6c;&#101;&#97;&#x63;&#110;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;">&#x72;&#121;&#x61;&#110;&#x6c;&#101;&#97;&#x63;&#110;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;</a>“ （需要换成你的注册邮箱地址），然后一路回车</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20.png" alt="20"></p>
 </li>
 <li><p>添加密钥：</p>
@@ -535,7 +638,7 @@
 </ul>
 <ul>
 <li><p>验证连接：</p>
-<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#x67;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>回车（固定格式），如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：Hi blackant-club! You’ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！（设置GitHub密钥原因是：通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥和GitHub上面的公钥是否配对，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是合法的）</p>
+<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;</a>回车（固定格式），如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：Hi blackant-club! You’ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！（设置GitHub密钥原因是：通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥和GitHub上面的公钥是否配对，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是合法的）</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/23.png" alt="23"></p>
 </li>
 </ul>
@@ -545,7 +648,7 @@
 <li><p>打开D:\Blog下的_config.yml文件（站点配置文件），下拉到底部，将原来的：</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/24.png" alt="24"></p>
 </li>
-<li><p>修改成：（注意：冒号后面有空格！格式为：<a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;</a>:blackant-club/blackant-club.github.io.git，关闭保存。</p>
+<li><p>修改成：（注意：冒号后面有空格！格式为：<a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#109;</a>:blackant-club/blackant-club.github.io.git，关闭保存。</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/45.png" alt="45"></p>
 </li>
 <li><p>有的朋友可能找不到这个git@xxxxxx，只需点击网站左上角你的仓库，然后会跳转到新的页面，按照下图顺序操作即可复制</p>

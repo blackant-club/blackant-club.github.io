@@ -91,8 +91,12 @@
 <meta property="og:image" content="https://gitee.com/blackant-club/blogimage/raw/master/images/20210520125710.png">
 <meta property="og:image" content="https://gitee.com/blackant-club/blogimage/raw/master/images/20210520130358.png">
 <meta property="og:image" content="https://gitee.com/blackant-club/blogimage/raw/master/images/20210520134402.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522184309.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522184843.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522201208.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522201537.png">
 <meta property="article:published_time" content="2021-05-06T07:21:48.000Z">
-<meta property="article:modified_time" content="2021-05-20T06:30:47.072Z">
+<meta property="article:modified_time" content="2021-05-22T12:16:22.543Z">
 <meta property="article:author" content="Ryan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/blackant-club/blogimage/raw/master/images/Snipaste_2021-05-07_17-36-48.png">
@@ -226,7 +230,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -321,10 +325,17 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-20 14:30:47" itemprop="dateModified" datetime="2021-05-20T14:30:47+08:00">2021-05-20</time>
+        <time title="修改时间：2021-05-22 20:16:22" itemprop="dateModified" datetime="2021-05-22T20:16:22+08:00">2021-05-22</time>
       </span>
 
   
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
       </div>
       <div class="post-meta">
     <span class="post-meta-item" title="本文字数">
@@ -332,14 +343,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>13k</span>
+      <span>15k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>12 分钟</span>
+      <span>13 分钟</span>
     </span>
 </div>
 
@@ -683,6 +694,29 @@
 <p>打开主题配置文件（D:\Blog\themes\next_config.yml）,搜索reward_settings，修改部分配置，注意：二维码放置路径为：D:\Blog\themes\next\source\images中，并确保图片名与_config.yml配置中的图片名一致。</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210520134402.png"></p>
 </li>
+<li><p>添加访客人数和总访问量（不蒜子计数）功能：</p>
+<ul>
+<li><p>打开主题配置文件，ctrl+f搜索busuanzi_count，将默认enable: false改为true，关闭保存。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522184309.png"></p>
+</li>
+<li><p>效果图：（备注：用hexo s部署在本地预览效果时，uv数和pv数会过大，这是由于不蒜子用户使用一个存储空间，所以使用localhost:4000进行本地预览时会导致数字异常，这是正常现象，只需要将博客部署至云端即可恢复正常。）</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522184843.png"></p>
+</li>
+</ul>
+</li>
+<li><p>添加网站运行时间：</p>
+<ul>
+<li><p>一个比较好的小功能，可以看见自己的博客运行多久了，随着时间一天天的增加，成就感也会一天天增加！打开D:\Blog\themes\next\layout_partials下的footer.njk文件，在末行添加如下代码，关闭保存。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;timeDate&quot;</span>&gt;</span>载入天数...<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;times&quot;</span>&gt;</span>载入时分秒...<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>(); </span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">createtime</span>(<span class="params"></span>) </span>&#123; </span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> grt= <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;08/10/2018 17:38:00&quot;</span>);<span class="comment">//在此处修改你的建站时间，格式：月/日/年 时:分:秒</span></span></span><br><span class="line">        now.setTime(now.getTime()+250); </span><br><span class="line"><span class="javascript">        days = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span>; dnum = <span class="built_in">Math</span>.floor(days); </span></span><br><span class="line"><span class="javascript">        hours = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> - (<span class="number">24</span> * dnum); hnum = <span class="built_in">Math</span>.floor(hours); </span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span>(<span class="built_in">String</span>(hnum).length ==<span class="number">1</span> )&#123;hnum = <span class="string">&quot;0&quot;</span> + hnum;&#125; minutes = (now - grt ) / <span class="number">1000</span> /<span class="number">60</span> - (<span class="number">24</span> * <span class="number">60</span> * dnum) - (<span class="number">60</span> * hnum); </span></span><br><span class="line"><span class="javascript">        mnum = <span class="built_in">Math</span>.floor(minutes); <span class="keyword">if</span>(<span class="built_in">String</span>(mnum).length ==<span class="number">1</span> )&#123;mnum = <span class="string">&quot;0&quot;</span> + mnum;&#125; </span></span><br><span class="line">        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); </span><br><span class="line"><span class="javascript">        snum = <span class="built_in">Math</span>.round(seconds); <span class="keyword">if</span>(<span class="built_in">String</span>(snum).length ==<span class="number">1</span> )&#123;snum = <span class="string">&quot;0&quot;</span> + snum;&#125; </span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">&quot;timeDate&quot;</span>).innerHTML = <span class="string">&quot;本站已安全运行 &quot;</span>+dnum+<span class="string">&quot; 天 &quot;</span>; </span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">&quot;times&quot;</span>).innerHTML = hnum + <span class="string">&quot; 小时 &quot;</span> + mnum + <span class="string">&quot; 分 &quot;</span> + snum + <span class="string">&quot; 秒&quot;</span>; </span></span><br><span class="line">    &#125; </span><br><span class="line"><span class="javascript"><span class="built_in">setInterval</span>(<span class="string">&quot;createtime()&quot;</span>,<span class="number">250</span>);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>实际操作如图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522201208.png"></p>
+</li>
+<li><p>预览效果：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522201537.png"></p>
+</li>
+</ul>
+</li>
 </ol>
     </div>
     <div>
@@ -694,7 +728,7 @@
 </div>
       
 	</div>
-    <div>
+	<div>
       
         
 <div class="my_post_copyright">
@@ -708,7 +742,7 @@
   <p><span>本文标题:</span>GitHub博客(NexT主题)优化篇</a></p>
   <p><span>文章作者:</span></a>Ryan</p>
   <p><span>发布时间:</span>2021年05月06日 - 15:21:48</p>
-  <p><span>最后更新:</span>2021年05月20日 - 14:30:47</p>
+  <p><span>最后更新:</span>2021年05月22日 - 20:16:22</p>
   <p><span>原始链接:</span><a href="/2021/05/06/GitHub%E5%8D%9A%E5%AE%A2-NexT%E4%B8%BB%E9%A2%98-%E4%BC%98%E5%8C%96%E7%AF%87/" title="GitHub博客(NexT主题)优化篇">https://blackant-club.github.io/2021/05/06/GitHub%E5%8D%9A%E5%AE%A2-NexT%E4%B8%BB%E9%A2%98-%E4%BC%98%E5%8C%96%E7%AF%87/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://blackant-club.github.io/2021/05/06/GitHub%E5%8D%9A%E5%AE%A2-NexT%E4%B8%BB%E9%A2%98-%E4%BC%98%E5%8C%96%E7%AF%87/"  aria-label="复制成功！"></i></span>
   </p>
@@ -738,7 +772,7 @@
 
     <footer class="post-footer">
           <div class="reward-container">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <div>您的支持是我最大的动力！</div>
   <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
     赞赏
   </button>
@@ -765,6 +799,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/05/22/%E5%9F%BA%E4%BA%8EPicGo-GitHub%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/" rel="next" title="基于PicGo+GitHub搭建免费图床">
+                  基于PicGo+GitHub搭建免费图床 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -797,19 +834,52 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">21k</span>
+    <span title="站点总字数">24k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">19 分钟</span>
+    <span title="站点阅读时长">22 分钟</span>
   </span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
-  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("08/10/2018 17:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
 
     </div>
   </footer>
@@ -827,6 +897,7 @@
 
 
   
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
