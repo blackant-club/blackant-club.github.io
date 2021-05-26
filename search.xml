@@ -20,6 +20,54 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
   </entry>
   <entry>
+    <title>一款国外老牌下载神器，你猜到了吗？</title>
+    <url>/posts/3513347368/</url>
+    <content><![CDATA[<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>今天介绍的是一款国外的多线程下载神器（为避免……以后不提软件名称，有图有真相，相信大家都懂得），支持多媒体下载、自动捕获链接、自动识别文件名、静默下载、批量下载、计划下载任务、站点抓取、队列等等。正巧昨天系统提示更新，看了一下版本已更新至6.38.25，那还等啥？</p>
+<h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><ol>
+<li><p>如果你的电脑之前已经安装过，请将其卸载，卸载完成电脑会自动重启。建议使用卸载神器“Uninstall Tool”进行完全卸载（不是普通卸载哦），卸载不干净（有残留）会导致无法重新安装，点击下面的链接可获取 <a href="https://mp.weixin.qq.com/s/8MWwXKPgnQXuc0lE_9pUAg">Uninstall Tool</a> 激活方式。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210524185554.png"></p>
+</li>
+<li><p>当然你也可以在软件内进行更新（点击菜单栏的帮助-检查更新按钮），只不过更新完成后也需要重新激活。</p>
+</li>
+<li><p>压缩包解压前请务必关闭杀毒软件和win10自带安全中心中的“实时保护”开关（鼠标左键点击桌面左下角的开始-设置-更新和安全-windows安全中心-病毒和威胁防护-病毒和威胁防护设置-管理设置-实时保护-关闭开关），因压缩包内含补丁，以免误报被直接删除造成无法魄解。</p>
+</li>
+<li><p>双击“xxxxx638build25.exe”进行程序的安装，安装过程比较简单，这里就不赘述（建议安装在除C盘以外其他盘符上）。</p>
+</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210524184922.png"></p>
+<h3 id="魄解："><a href="#魄解：" class="headerlink" title="魄解："></a>魄解：</h3><ol>
+<li><p>安装完成后不要启动程序，此时可能会弹出需要注册等信息，不用理会，关闭窗口。鼠标右键将解压缩后获取的补丁“xxx_Activator_v1.8.1_By_ActVer.exe”进行剪切（或者复制），然后鼠标右键软件桌面快捷方式，选择“打开文件所在的位置”，鼠标指向空白处，右键选择“粘贴”，接着鼠标右键以管理员身份运行这个补丁文件，稍等会出现弹窗，见下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210524191012.png"></p>
+</li>
+<li><p>点击“Activate”，如图说明修补完成，关闭窗口退出。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210524191126.png"></p>
+</li>
+<li><p>验证是否激活：</p>
+<ul>
+<li><p>打开软件桌面快捷方式，点击菜单栏中的注册按钮，显示已注册。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210524191530.png"></p>
+</li>
+<li><p>验证版本号及授权信息：点击帮助-关于</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210524192012.png"></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="配置："><a href="#配置：" class="headerlink" title="配置："></a>配置：</h3><ol>
+<li><p>软件内配置：</p>
+<p>点击菜单栏中的下载按钮-选项-连接-连接类型/选项中选择”较高速率连接“-最大连接数调整为32-确定，见下图：</p>
+</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210524192826.png"></p>
+<ol start="2">
+<li><p>浏览器中配置：</p>
+<p>软件安装成功后，会自动添加到浏览器的扩展中心里，只不过需要你把扩展的开关打开，具体步骤如图（第5步可忽略）：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210524193226.png"></p>
+</li>
+</ol>
+<p>至此软件成功激活，小伙伴们又可以愉快的玩耍了！</p>]]></content>
+  </entry>
+  <entry>
     <title>基于PicGo+GitHub搭建免费图床</title>
     <url>/posts/1228905132/</url>
     <content><![CDATA[<p>在写第二篇博文的时候，有个章节介绍了如何利用PicGo+Gitee搭建免费图床，本想可以一劳永逸，但是在上传第50张图片时，出现报错，提示You can only upload 50 Images per week!（你一周只能上传50张图片），当时看了一下时间是周五，要等到下个周一才能继续上传，这谁受得了！于是萌生用PicGo+GitHub来搭建第二款免费图床的想法，不知是否可行，接下来让我们一起试试吧！</p>
@@ -652,7 +700,7 @@
 <li><p>配置SSH Key</p>
 <ul>
 <li><p>创建SSH密钥：</p>
-<p>输入 ssh-keygen -t rsa -C “<a href="mailto:&#114;&#x79;&#x61;&#110;&#108;&#x65;&#97;&#99;&#x6e;&#64;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;">&#114;&#x79;&#x61;&#110;&#108;&#x65;&#97;&#99;&#x6e;&#64;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;</a>“ （需要换成你的注册邮箱地址），然后一路回车</p>
+<p>输入 ssh-keygen -t rsa -C “<a href="mailto:&#114;&#121;&#97;&#110;&#x6c;&#101;&#97;&#99;&#x6e;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#111;&#109;">&#114;&#121;&#97;&#110;&#x6c;&#101;&#97;&#99;&#x6e;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#111;&#109;</a>“ （需要换成你的注册邮箱地址），然后一路回车</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20.png" alt="20"></p>
 </li>
 <li><p>添加密钥：</p>
@@ -666,7 +714,7 @@
 </ul>
 <ul>
 <li><p>验证连接：</p>
-<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#99;&#111;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#99;&#111;&#109;</a>回车（固定格式），如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：Hi blackant-club! You’ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！（设置GitHub密钥原因是：通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥和GitHub上面的公钥是否配对，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是合法的）</p>
+<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#103;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a>回车（固定格式），如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：Hi blackant-club! You’ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！（设置GitHub密钥原因是：通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥和GitHub上面的公钥是否配对，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是合法的）</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/23.png" alt="23"></p>
 </li>
 </ul>
@@ -676,7 +724,7 @@
 <li><p>打开D:\Blog下的_config.yml文件（站点配置文件），下拉到底部，将原来的：</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/24.png" alt="24"></p>
 </li>
-<li><p>修改成：（注意：冒号后面有空格！格式为：<a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d;</a>:blackant-club/blackant-club.github.io.git，关闭保存。</p>
+<li><p>修改成：（注意：冒号后面有空格！格式为：<a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#111;&#109;">&#x67;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#111;&#109;</a>:blackant-club/blackant-club.github.io.git，关闭保存。</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/45.png" alt="45"></p>
 </li>
 <li><p>有的朋友可能找不到这个git@xxxxxx，只需点击网站左上角你的仓库，然后会跳转到新的页面，按照下图顺序操作即可复制</p>
