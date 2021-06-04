@@ -208,6 +208,116 @@
 <h3 id="致谢："><a href="#致谢：" class="headerlink" title="致谢："></a>致谢：</h3><p>感谢诸多大神们的文章，真的学到了很多，在这里由衷的感谢！虽然过程比较折腾，但满满的成就感！一个字“值”！</p>]]></content>
   </entry>
   <entry>
+    <title>免费白嫖 Office 365 E5正版</title>
+    <url>/posts/2790840749/</url>
+    <content><![CDATA[<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>6月1日《著作权法》与《专利法》正式实施，对于知识产权的规制也会越来越严格，这也正是小黑最近一直思考的问题，只有在合法合规的前提下才能谈未来，才能走得更远。相信大家都知道“授人以鱼不如授人以渔”这句话，既然“鱼”没了，只能从“渔”上做文章。因此，小黑做了一个无奈之举：以后文章中只发教程，不提示公众号关键字回复，（小黑当日文章关键字设置规则：比如21年06月04日推文（即210604），相信你懂得！），提醒大家充分利用好“公众号后台”，小黑会在每天下午或晚上对大家的留言进行逐一回复。</p>
+<p>最近公众号后台收到有关Office激活失败的留言，网上查了一下发现最近微软在封杀盗版Office，这是要出Office 2021的节奏？作为经典的办公软件，微软Office套件毫无疑问是行业第一。许多小伙伴一直搞不明白Office 2019与Office 365有什么区别，就价格来说2019是一次购买永久使用，而365是按年订阅的，并且365不同的版本（个人版、家庭版和商业版），收费也是不同的。2019版使用时间越长越划算，而在多端设备的体验上，365会优于2019，它在不同的设备上直接登录微软账号即可，借助onedrive，可以无缝衔接在不同设备上查看和编辑文件。啰嗦了这么多，回归正题，19年4月微软推出了全新的开发者订阅模式，允许获取可续订90天的Office 365，注意了哈，既然是可续订的，我的理解就是能一直白嫖的。</p>
+<h3 id="教程："><a href="#教程：" class="headerlink" title="教程："></a>教程：</h3><ol>
+<li><h4 id="注册登录Office开发者："><a href="#注册登录Office开发者：" class="headerlink" title="注册登录Office开发者："></a>注册登录Office开发者：</h4><ul>
+<li><p>访问 <a href="https://developer.microsoft.com/zh-cn/microsoft-365/dev-program">微软 Office开发者中心</a> ，点击“立即加入”</p>
+</li>
+<li><p>你可以用已有的微软账号登录，也可以注册一个全新的账号（建议注册新的，最好是一个账号跟着一个Office版本，比如我原本有个A1P双授权账号再拿来登录E5，这不让系统为难吗？）</p>
+</li>
+<li><p>登录成功后，选择国家（china），公司名称（随意填）、语言选（中文简体），勾选接受条款，然后下一步。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210602195659.png"></p>
+</li>
+<li><p>新页面中，勾选“个人项目”，下一步，全选，保存。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210602200318.png"></p>
+</li>
+<li><p>关闭弹窗，点击“设置E5订阅”</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210602200406.png"></p>
+</li>
+<li><p>在订阅设置界面中，输入用户名和域（用户名+域+固定后缀=你的域名，比如：用户名为lee，域为cn，加上固定后缀.onmicrosoft.com，就形成你的域名：<a href="mailto:&#x6c;&#101;&#101;&#64;&#99;&#x6e;&#46;&#111;&#x6e;&#109;&#105;&#x63;&#x72;&#x6f;&#x73;&#111;&#x66;&#116;&#46;&#99;&#x6f;&#x6d;">&#x6c;&#101;&#101;&#64;&#99;&#x6e;&#46;&#111;&#x6e;&#109;&#105;&#x63;&#x72;&#x6f;&#x73;&#111;&#x66;&#116;&#46;&#99;&#x6f;&#x6d;</a>），这里其实就是管理中心登陆账号，也就是全局管理员，所以务必根据提示输入信息，手机号务必正确，用来接收验证码（由于网站使用了谷歌人机验证，因此需要科学上网）。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210602214345.png"></p>
+</li>
+<li><p>等待一分钟左右，页面将显示订阅成功（剩余92天，25位用户许可证）。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210602214356.png"></p>
+</li>
+</ul>
+</li>
+<li><h4 id="下载安装Office-365"><a href="#下载安装Office-365" class="headerlink" title="下载安装Office 365:"></a>下载安装Office 365:</h4><p>打开 <a href="https://www.office.com/">Office官网</a> ，使用上图中的管理员账号和密码登录，关闭引导后，点击左边栏的PPT或者 Word 等图标，即可使用网页端服务（需要等系统自动设置好OneDrive才可以）。如需使用客户端，点击右上角的“安装Office ”-&gt;“Office 365 应用”，使用下载的安装器，跟随步骤安装即可。</p>
+</li>
+<li><h4 id="扩展空间："><a href="#扩展空间：" class="headerlink" title="扩展空间："></a>扩展空间：</h4><p>订阅号默认的 OneDrive 空间是 1T，可在管理页扩展为 5T。打开 <a href="https://logi.im/go/aHR0cHM6Ly9hZG1pbi5vbmVkcml2ZS5jb20vP3Y9U3RvcmFnZVNldHRpbmdz">OneDrive 存储管理页</a> ，登录申请的管理号，将默认存储空间1024修改为5012后点击保存。如页面无法加载，则系统尚未完成初始化，等待 24 小时后重新打开。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603134157.png"></p>
+</li>
+<li><h4 id="子号分配："><a href="#子号分配：" class="headerlink" title="子号分配："></a>子号分配：</h4><ul>
+<li><p>管理员可分配 25 个子号，每个子号都可使Office 365 并拥有 5T OneDrive 空间。点击页面中的 “管理” 按钮，进入管理员中心。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603135252.png"></p>
+</li>
+<li><p>点击左侧菜单栏的“用户 - 活跃用户”，点击右侧的“添加用户”</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603135752.png"></p>
+</li>
+<li><p>在弹出的选项卡中，填写必要信息后，点击“下一步”。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603140632.png"></p>
+</li>
+<li><p>在接下来的三个步骤中，全部“保持默认选项”，直接点击“下一步”，最后“添加关闭”选项卡即可。</p>
+</li>
+</ul>
+</li>
+<li><h4 id="实现E-5自动续期："><a href="#实现E-5自动续期：" class="headerlink" title="实现E 5自动续期："></a>实现E 5自动续期：</h4><p>Microsoft 365 E5 Renew Plus是由CSDN博主SundayRX开发的一款专门用于E5自动续期的Windows桌面工具，它通过自动调用API的方式加强开发者账户的活跃度，以此来自动续期E5。</p>
+<p>5.1 用管理员账号登录<a href="https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade">Azure应用注册</a>，点击左上角的“新注册”</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603165728.png"></p>
+<p>5.2 名称随意写、注意可访问性选项选择第三项、重定向URL暂时不填 、完成后点击注册。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603170906.png"></p>
+<p>5.3 新页面中选择左边栏的“概述”，点击右边栏的“添加重定向URL”</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603171536.png"></p>
+<p>5.4 点击“添加平台”，再点击“移动和桌面应用程序”</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603171831.png"></p>
+<p>5.5 勾选第一个URL，将“允许公共客户端流”，默认按钮“否”切换为“是” ，点击“配置”，点击“保存”。（注意：下面会提到两种方法，如果使用第一种方法这里需要切换“是”，如果采用第二种方法，要保持默认“否”，否则会造成无法授权！！，目前我采用的是第二种方法。）</p>
+<p>5.6 点击左边栏的证书和密码-&gt;新客户端密码-&gt;按序号操作如图：</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603204102.png"></p>
+<p>5.7 最后保存好客户端密码备用：</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603204819.png"></p>
+<p>5.8 点击左边栏的概述，复制右边栏的客户端ID备用：</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603205239.png"></p>
+<p>5.9 到这里有两种解决方法：</p>
+<ul>
+<li><p>方法一（应用程序必须以登录用户身份访问API）：使用程序自动请求配置API权限：软件无需安装但需要安装运行环境支持。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603180302.png"></p>
+</li>
+<li><p>运行程序，点击“开始运行”，点击右边栏的“添加账号”，账号栏填注册的管理员账号，客户端ID可到上面的第5.8步中查看并复制，然后点击“自动配置应用程序API权限”</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603182257.png"></p>
+</li>
+<li><p>弹窗，登录管理员账号并输入密码，勾选“代表组织同意”，点击“接受”，回到软件界面，此时会显示“授权成功”，点击“确定”</p>
+</li>
+<li><p>点击开始运行即可。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603183802.png"></p>
+</li>
+<li><p>方法二（应用程序在用户未登录的情况下作为后台服务或守护程序运行）：订阅的有效期是90天。到期前，如果微软检测到账号被用于开发，即API被频繁且无规律调用，将自动续期。因此，只需编写几行代码，定时高频调用其API即可。</p>
+</li>
+<li><p>打开Azure应用注册，点击左边栏的身份验证-&gt;右边栏的添加URL-&gt;在输入框中输入 <a href="https://e5.qyi.io/outlook/auth2/receive">https://e5.qyi.io/outlook/auth2/receive</a> ，然后点击保存。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603215125.png"></p>
+</li>
+<li><p>点击左边栏的API权限-&gt;右边栏的添加权限-&gt;Microsoft Graph</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210604144719.png"></p>
+</li>
+<li><p>接着在新页面中，按顺序点击，如下图：</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210604145507.png"></p>
+</li>
+<li><p>如图，显示未授权，点击“代表ryanlea授权管理员同意”，出现弹窗，勾选“是”，点击“保存并继续”，接着点击“授权管理员同意”，点击“是”。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210604150438.png"></p>
+</li>
+<li><p>注册个Github 账号，小黑在博客上已做介绍，这里不再赘述。打开下面的网址 <a href="https://e5.qyi.io/">https://e5.qyi.io</a> ，点击登录（用注册的Github 账号），点击授权luoye663-&gt;返回个人中心-&gt;新建-&gt;名称随便输入（如：Matthew），描述可空-&gt;确定</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603202218.png"></p>
+</li>
+<li><p>点击配置</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603205729.png"></p>
+</li>
+<li><p>弹窗，输入客户端ID和客户端密码（上面第5.8和5.7步，当时提示备用），点击下一步</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603210428.png"></p>
+</li>
+<li><p>接着点下一步，点击去授权，此时会跳转到 microsoftonline Auth2.0授权页面，这里建议使用同一个域下的空账号(子账号)进行授权。(苹果手机需要在App Store中下载Authenticayor用来扫码)</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603223341.png"></p>
+</li>
+<li><p>打开Office官网，测试刚创建的子号是否可以登录和使用：</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210603223756.png"></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="写在最后："><a href="#写在最后：" class="headerlink" title="写在最后："></a>写在最后：</h3><p>OK，今天就BB到这，希望今天的分享有助于大家的工作和学习！动手能力强的朋友可以动起来，不喜欢捣鼓的朋友，但又想免费白嫖Office365的朋友，只要相信小黑（建议不要将个人私密的东西保存在上面），可将你需要的姓：xx 名：xx （可中文可英文）用户名：xxx （英文）在公众号后台发给我，我会把账号信息私发给大家，大家在第一次登录时把密码修改成你自己的就可以了（只有23个名额，先到先得！）</p>]]></content>
+  </entry>
+  <entry>
     <title>GitHub博客(NexT主题)优化篇</title>
     <url>/posts/31130789/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h3><p>自3月5日公众号停更至今已经两个多月了，期间不少朋友在后台询问，这里跟大家解释一下：随着版权的越来越严格，年后不少软件分享网站、公众号被关停，稍不留意就会收到律师函。之前破解版的PS一搜一大堆，可如今是一个也找不到了，估计日后想在网上获取破解软件会越来越难。<span id="more"></span>不过请大家放心，你若不离，我便不弃，大家有什么软件方面的需求，可在公众号后台反馈，小黑会私发给大家。虽然最近没有推文，小黑也没闲着，捣鼓了一个个人博客网站（基于Hexo+GitHub搭建的免费个人博客，好处是只要有网络，随时随地发文，无需审查），欢迎大家的访问，友情链接：<a href="https://blackant-club.github.io/">蚂蚁小黑</a></p>
@@ -760,7 +870,7 @@
 <li><p>配置SSH Key</p>
 <ul>
 <li><p>创建SSH密钥：</p>
-<p>输入 ssh-keygen -t rsa -C “<a href="mailto:&#114;&#x79;&#97;&#x6e;&#x6c;&#101;&#x61;&#99;&#110;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#x63;&#111;&#x6d;">&#114;&#x79;&#97;&#x6e;&#x6c;&#101;&#x61;&#99;&#110;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#x63;&#111;&#x6d;</a>“ （需要换成你的注册邮箱地址），然后一路回车</p>
+<p>输入 ssh-keygen -t rsa -C “<a href="mailto:&#x72;&#x79;&#x61;&#110;&#108;&#x65;&#97;&#99;&#x6e;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;">&#x72;&#x79;&#x61;&#110;&#108;&#x65;&#97;&#99;&#x6e;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;</a>“ （需要换成你的注册邮箱地址），然后一路回车</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20.png" alt="20"></p>
 </li>
 <li><p>添加密钥：</p>
@@ -774,7 +884,7 @@
 </ul>
 <ul>
 <li><p>验证连接：</p>
-<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#x40;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;</a>回车（固定格式），如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：Hi blackant-club! You’ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！（设置GitHub密钥原因是：通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥和GitHub上面的公钥是否配对，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是合法的）</p>
+<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>回车（固定格式），如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：Hi blackant-club! You’ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！（设置GitHub密钥原因是：通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥和GitHub上面的公钥是否配对，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是合法的）</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/23.png" alt="23"></p>
 </li>
 </ul>
@@ -784,7 +894,7 @@
 <li><p>打开D:\Blog下的_config.yml文件（站点配置文件），下拉到底部，将原来的：</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/24.png" alt="24"></p>
 </li>
-<li><p>修改成：（注意：冒号后面有空格！格式为：<a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#x6d;</a>:blackant-club/blackant-club.github.io.git，关闭保存。</p>
+<li><p>修改成：（注意：冒号后面有空格！格式为：<a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;</a>:blackant-club/blackant-club.github.io.git，关闭保存。</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/45.png" alt="45"></p>
 </li>
 <li><p>有的朋友可能找不到这个git@xxxxxx，只需点击网站左上角你的仓库，然后会跳转到新的页面，按照下图顺序操作即可复制</p>
