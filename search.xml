@@ -128,86 +128,6 @@
 </ol>]]></content>
   </entry>
   <entry>
-    <title>基于PicGo+GitHub搭建免费图床</title>
-    <url>/posts/1228905132/</url>
-    <content><![CDATA[<p>在写第二篇博文的时候，有个章节介绍了如何利用PicGo+Gitee搭建免费图床，本想可以一劳永逸，但是在上传第50张图片时，出现报错，提示You can only upload 50 Images per week!（你一周只能上传50张图片），当时看了一下时间是周五，要等到下个周一才能继续上传，这谁受得了！于是萌生用PicGo+GitHub来搭建第二款免费图床的想法，不知是否可行，接下来让我们一起试试吧！</p>
-<hr>
-<h3 id="配置GitHub："><a href="#配置GitHub：" class="headerlink" title="配置GitHub："></a>配置GitHub：</h3><ol>
-<li><p>注册GitHub账号并登录，注册过程可参考我的博客<a href="https://blackant-club.github.io/">蚂蚁小黑</a>中的第一篇文章my_first_blog，这里略过。</p>
-</li>
-<li><p>创建一个新仓库用于存放图片。</p>
-<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143609.png"></p>
-</li>
-<li><p>如图自己起个仓库名，勾选public（必须的）和Add a README file，点击Create repository</p>
-<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143639.png"></p>
-</li>
-<li><p>见下图，按照顺序点击：</p>
-<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143659.png"></p>
-</li>
-<li><p>点击左边栏的Personal access tokens，再点击右边栏的Generate new token</p>
-<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143720.png"></p>
-</li>
-<li><p>输入GitHub账号密码，填写Note，勾选repo，点击Generate token</p>
-<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143807.png"></p>
-</li>
-<li><p>注意：生成的token只会在这里显示一次，所以记得单独保存下来哦！！！，至此，Github的配置完成。</p>
-<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522144055.png"></p>
-</li>
-</ol>
-<h3 id="配置PicGo："><a href="#配置PicGo：" class="headerlink" title="配置PicGo："></a>配置PicGo：</h3><ol>
-<li><p>下载安装<a href="https://github.com/Molunerfinn/PicGo/releases">PicGo</a>，选择picGo-Setup-XXX.exe下载软件安装包即可。注意：安装软件时选择仅为我安装，不要安装在C盘上！！！，否则后面上传图片总是失败，因为这个问题找了半天才发现是路径的问题！）</p>
-</li>
-<li><p>打开PicGo，点击左边栏的图床设置-GitHub图床进行设置：</p>
-<ul>
-<li>仓库名：[github用户名]/[新建的仓库名称]</li>
-<li>分支：2020.10.01开始，github的默认分支名变更为main</li>
-<li>设定token：第一步创建的token</li>
-<li>指定存储路径patch：可填可不填，如果想将图片上传到仓库的指定目录下，可以填写目录名加/，例如我设置的为img/</li>
-<li>设定自定义域名：这里统一用jsdelivr的CDN加速域名，<a href="https://cdn.jsdelivr.net/gh/[github%E7%94%A8%E6%88%B7%E5%90%8D]/[%E4%BB%93%E5%BA%93%E5%90%8D]@main">https://cdn.jsdelivr.net/gh/[github用户名]/[仓库名]@main</a> ，注意，此处的分支一定要填写@main，否则默认使用master分支。而现在github创建的默认分支名为main，如果不指定，则会出现图片不能上传的情况。</li>
-<li>至此，github+picGo的配置完成，可以在上传区进行图片上传了。</li>
-</ul>
-</li>
-<li><p>对于之前已经安装过PicGo的朋友，不需要重新安装，可打开PicGo点击图床设置，点击GitHub图床（之前选择的是gitee），然后按照上一步配置，见下图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522151740.png"></p>
-</li>
-<li><p>关闭窗口，重新启动PicGo，此时PicGo已将原来的图床Gitee替换为GitHub图床，见下图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522151928.png"></p>
-</li>
-<li><p>此时可以上传图片了，我的使用方法是：打开Typora，在文章中需要插入图片的地方，按快捷键ctrl+shift+i，然后选中要插入的图片即可上传。（此操作下：如果之前没打开PicGo，此时会自动打开，但不需要在PicGo中做任何操作，前提是需要配置好Typora）</p>
-</li>
-<li><p>配置完PicGo后却上传图片失败，可以参考以下方法解决：</p>
-<ul>
-<li><p>检查自定义域名是否正确</p>
-</li>
-<li><p>仓库名不要有空格</p>
-</li>
-<li><p>图片名字不要带有特殊符号，如：%、+、*、空格等</p>
-</li>
-<li><p>建议开启时间戳重命名，防止图片名字重复</p>
-</li>
-<li><p>PicGo应用不稳定因素，需重启应用</p>
-</li>
-<li><p>想删除不想要的图片（已上传完毕的图片），可点击PicGo左边栏的”相册“，最近上传的照片都在这里显示，不想要的照片，可通过点击”垃圾桶“图标进行删除，会一并删除保存在GitHub仓库中的这张图。</p>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="配置Typora："><a href="#配置Typora：" class="headerlink" title="配置Typora："></a>配置Typora：</h3><p>关于配置Typora这里就略过，大家可在<a href="https://blackant-club.github.io/">蚂蚁小黑</a>中的第一篇文章my_first_blog中查看。至此所有配置完成（以后可以在图床设置中随意切换GitHub图床和Gitee图床使用），大家可以愉快的玩耍了！</p>
-<h3 id="备忘："><a href="#备忘：" class="headerlink" title="备忘："></a>备忘：</h3><ul>
-<li>查看所有已安装的 hexo 插件：npm ls -dept 0</li>
-<li>安装：npm install 插件名 –save （注意save前是两个-）</li>
-<li>卸载：npm uninstall 插件名 –save （注意save前是两个-）</li>
-<li>创建文章：hexo new “文章名”</li>
-<li>清理缓存：hexo clean</li>
-<li>创建静态网页：hexo g</li>
-<li>启动预览：hexo s</li>
-<li>关闭预览：ctrl+c</li>
-<li>上传服务器：hexo d</li>
-<li>创建静态网页并上传服务器：hexo d -g</li>
-</ul>
-<h3 id="致谢："><a href="#致谢：" class="headerlink" title="致谢："></a>致谢：</h3><p>感谢诸多大神们的文章，真的学到了很多，在这里由衷的感谢！虽然过程比较折腾，但满满的成就感！一个字“值”！</p>]]></content>
-  </entry>
-  <entry>
     <title>免费白嫖 Office 365 E5正版</title>
     <url>/posts/2790840749/</url>
     <content><![CDATA[<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>6月1日《著作权法》与《专利法》正式实施，对于知识产权的规制也会越来越严格，这也正是小黑最近一直思考的问题，只有在合法合规的前提下才能谈未来，才能走得更远。相信大家都知道“授人以鱼不如授人以渔”这句话，既然“鱼”没了，只能从“渔”上做文章。因此，小黑做了一个无奈之举：以后文章中只发教程，不提示公众号关键字回复，（小黑当日文章关键字设置规则：比如21年06月04日推文（即210604），相信你懂得！），提醒大家充分利用好“公众号后台”，小黑会在每天下午或晚上对大家的留言进行逐一回复。</p>
@@ -227,7 +147,7 @@
 <li><p>关闭弹窗，点击“设置E5订阅”</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210602200406.png"></p>
 </li>
-<li><p>在订阅设置界面中，输入用户名和域（用户名+域+固定后缀=你的域名，比如：用户名为lee，域为cn，加上固定后缀.onmicrosoft.com，就形成你的域名：<a href="mailto:&#x6c;&#101;&#101;&#64;&#99;&#x6e;&#46;&#111;&#x6e;&#109;&#105;&#x63;&#x72;&#x6f;&#x73;&#111;&#x66;&#116;&#46;&#99;&#x6f;&#x6d;">&#x6c;&#101;&#101;&#64;&#99;&#x6e;&#46;&#111;&#x6e;&#109;&#105;&#x63;&#x72;&#x6f;&#x73;&#111;&#x66;&#116;&#46;&#99;&#x6f;&#x6d;</a>），这里其实就是管理中心登陆账号，也就是全局管理员，所以务必根据提示输入信息，手机号务必正确，用来接收验证码（由于网站使用了谷歌人机验证，因此需要科学上网）。</p>
+<li><p>在订阅设置界面中，输入用户名和域（用户名+域+固定后缀=你的域名，比如：用户名为lee，域为cn，加上固定后缀.onmicrosoft.com，就形成你的域名：<a href="mailto:&#108;&#101;&#101;&#64;&#99;&#x6e;&#x2e;&#111;&#110;&#109;&#105;&#x63;&#x72;&#111;&#x73;&#x6f;&#102;&#116;&#x2e;&#99;&#x6f;&#109;">&#108;&#101;&#101;&#64;&#99;&#x6e;&#x2e;&#111;&#110;&#109;&#105;&#x63;&#x72;&#111;&#x73;&#x6f;&#102;&#116;&#x2e;&#99;&#x6f;&#109;</a>），这里其实就是管理中心登陆账号，也就是全局管理员，所以务必根据提示输入信息，手机号务必正确，用来接收验证码（由于网站使用了谷歌人机验证，因此需要科学上网）。</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210602214345.png"></p>
 </li>
 <li><p>等待一分钟左右，页面将显示订阅成功（剩余92天，25位用户许可证）。</p>
@@ -316,6 +236,222 @@
 </li>
 </ol>
 <h3 id="写在最后："><a href="#写在最后：" class="headerlink" title="写在最后："></a>写在最后：</h3><p>OK，今天就BB到这，希望今天的分享有助于大家的工作和学习！动手能力强的朋友可以动起来，不喜欢捣鼓的朋友，但又想免费白嫖Office365的朋友，只要相信小黑（建议不要将个人私密的东西保存在上面），可将你需要的姓：xx 名：xx （可中文可英文）用户名：xxx （英文）在公众号后台发给我，我会把账号信息私发给大家，大家在第一次登录时把密码修改成你自己的就可以了（只有23个名额，先到先得！）</p>]]></content>
+  </entry>
+  <entry>
+    <title>基于PicGo+GitHub搭建免费图床</title>
+    <url>/posts/1228905132/</url>
+    <content><![CDATA[<p>在写第二篇博文的时候，有个章节介绍了如何利用PicGo+Gitee搭建免费图床，本想可以一劳永逸，但是在上传第50张图片时，出现报错，提示You can only upload 50 Images per week!（你一周只能上传50张图片），当时看了一下时间是周五，要等到下个周一才能继续上传，这谁受得了！于是萌生用PicGo+GitHub来搭建第二款免费图床的想法，不知是否可行，接下来让我们一起试试吧！</p>
+<hr>
+<h3 id="配置GitHub："><a href="#配置GitHub：" class="headerlink" title="配置GitHub："></a>配置GitHub：</h3><ol>
+<li><p>注册GitHub账号并登录，注册过程可参考我的博客<a href="https://blackant-club.github.io/">蚂蚁小黑</a>中的第一篇文章my_first_blog，这里略过。</p>
+</li>
+<li><p>创建一个新仓库用于存放图片。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143609.png"></p>
+</li>
+<li><p>如图自己起个仓库名，勾选public（必须的）和Add a README file，点击Create repository</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143639.png"></p>
+</li>
+<li><p>见下图，按照顺序点击：</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143659.png"></p>
+</li>
+<li><p>点击左边栏的Personal access tokens，再点击右边栏的Generate new token</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143720.png"></p>
+</li>
+<li><p>输入GitHub账号密码，填写Note，勾选repo，点击Generate token</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522143807.png"></p>
+</li>
+<li><p>注意：生成的token只会在这里显示一次，所以记得单独保存下来哦！！！，至此，Github的配置完成。</p>
+<p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20210522144055.png"></p>
+</li>
+</ol>
+<h3 id="配置PicGo："><a href="#配置PicGo：" class="headerlink" title="配置PicGo："></a>配置PicGo：</h3><ol>
+<li><p>下载安装<a href="https://github.com/Molunerfinn/PicGo/releases">PicGo</a>，选择picGo-Setup-XXX.exe下载软件安装包即可。注意：安装软件时选择仅为我安装，不要安装在C盘上！！！，否则后面上传图片总是失败，因为这个问题找了半天才发现是路径的问题！）</p>
+</li>
+<li><p>打开PicGo，点击左边栏的图床设置-GitHub图床进行设置：</p>
+<ul>
+<li>仓库名：[github用户名]/[新建的仓库名称]</li>
+<li>分支：2020.10.01开始，github的默认分支名变更为main</li>
+<li>设定token：第一步创建的token</li>
+<li>指定存储路径patch：可填可不填，如果想将图片上传到仓库的指定目录下，可以填写目录名加/，例如我设置的为img/</li>
+<li>设定自定义域名：这里统一用jsdelivr的CDN加速域名，<a href="https://cdn.jsdelivr.net/gh/[github%E7%94%A8%E6%88%B7%E5%90%8D]/[%E4%BB%93%E5%BA%93%E5%90%8D]@main">https://cdn.jsdelivr.net/gh/[github用户名]/[仓库名]@main</a> ，注意，此处的分支一定要填写@main，否则默认使用master分支。而现在github创建的默认分支名为main，如果不指定，则会出现图片不能上传的情况。</li>
+<li>至此，github+picGo的配置完成，可以在上传区进行图片上传了。</li>
+</ul>
+</li>
+<li><p>对于之前已经安装过PicGo的朋友，不需要重新安装，可打开PicGo点击图床设置，点击GitHub图床（之前选择的是gitee），然后按照上一步配置，见下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522151740.png"></p>
+</li>
+<li><p>关闭窗口，重新启动PicGo，此时PicGo已将原来的图床Gitee替换为GitHub图床，见下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210522151928.png"></p>
+</li>
+<li><p>此时可以上传图片了，我的使用方法是：打开Typora，在文章中需要插入图片的地方，按快捷键ctrl+shift+i，然后选中要插入的图片即可上传。（此操作下：如果之前没打开PicGo，此时会自动打开，但不需要在PicGo中做任何操作，前提是需要配置好Typora）</p>
+</li>
+<li><p>配置完PicGo后却上传图片失败，可以参考以下方法解决：</p>
+<ul>
+<li><p>检查自定义域名是否正确</p>
+</li>
+<li><p>仓库名不要有空格</p>
+</li>
+<li><p>图片名字不要带有特殊符号，如：%、+、*、空格等</p>
+</li>
+<li><p>建议开启时间戳重命名，防止图片名字重复</p>
+</li>
+<li><p>PicGo应用不稳定因素，需重启应用</p>
+</li>
+<li><p>想删除不想要的图片（已上传完毕的图片），可点击PicGo左边栏的”相册“，最近上传的照片都在这里显示，不想要的照片，可通过点击”垃圾桶“图标进行删除，会一并删除保存在GitHub仓库中的这张图。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="配置Typora："><a href="#配置Typora：" class="headerlink" title="配置Typora："></a>配置Typora：</h3><p>关于配置Typora这里就略过，大家可在<a href="https://blackant-club.github.io/">蚂蚁小黑</a>中的第一篇文章my_first_blog中查看。至此所有配置完成（以后可以在图床设置中随意切换GitHub图床和Gitee图床使用），大家可以愉快的玩耍了！</p>
+<h3 id="备忘："><a href="#备忘：" class="headerlink" title="备忘："></a>备忘：</h3><ul>
+<li>查看所有已安装的 hexo 插件：npm ls -dept 0</li>
+<li>安装：npm install 插件名 –save （注意save前是两个-）</li>
+<li>卸载：npm uninstall 插件名 –save （注意save前是两个-）</li>
+<li>创建文章：hexo new “文章名”</li>
+<li>清理缓存：hexo clean</li>
+<li>创建静态网页：hexo g</li>
+<li>启动预览：hexo s</li>
+<li>关闭预览：ctrl+c</li>
+<li>上传服务器：hexo d</li>
+<li>创建静态网页并上传服务器：hexo d -g</li>
+</ul>
+<h3 id="致谢："><a href="#致谢：" class="headerlink" title="致谢："></a>致谢：</h3><p>感谢诸多大神们的文章，真的学到了很多，在这里由衷的感谢！虽然过程比较折腾，但满满的成就感！一个字“值”！</p>]]></content>
+  </entry>
+  <entry>
+    <title>抢先体验Office2021 ProPlus LTSC</title>
+    <url>/posts/2967912747/</url>
+    <content><![CDATA[<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>作为经典的办公软件，微软Office套件毫无疑问是行业第一。前期刚和大家分享了<a href="https://mp.weixin.qq.com/s/GjnQh_b9h0vLOpsEdReq4Q">免费白嫖Office 365 E5</a> ，今天带来office 2021 ProPlus LTSC专业增强版，该版本主要适用于喜欢一次性买断而不是按月订阅的Office 365用户。闲话少说，今天帮大家解决以下三个问题：</p>
+<ul>
+<li>如何将强制安装到C盘的软件，修改成可自定义路径（减少对C盘的占用）</li>
+<li>抢先体验office 2021 ProPlus LTSC</li>
+<li>解决安装完成后查看版本时，可能存在显示的版本与所安装版本不同的问题</li>
+</ul>
+<h3 id="教程："><a href="#教程：" class="headerlink" title="教程："></a>教程：</h3><ol>
+<li>在安装office之前，快捷键win键+r-&gt;输入regedit-&gt;回车-&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion-&gt;看右边栏-&gt;修改ProgramFilesDir的值和ProgramW6432Dir的值，分别将原来的C:\Program Files改为G:\Microsoft Office 2021 Pro Plus LTSC（我想要的安装位置）-&gt;关闭窗口-&gt;重启电脑</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606083829.png"></p>
+<ol start="2">
+<li>电脑重启后，将压缩包解压会获取到三个文件，注意：其中Office Tool Plus.exe是作为备用（用来解决安装完成后可能出现版本显示不一致的问题，比如安装的是2021版，显示的却是2016版）。打开解压后的Microsoft Office 2021 Pro Plus LTSC文件夹，双击OInstall.exe运行安装程序。安装之前请务必点击“Uninstall Office”进行卸载，卸载之前的版本（新版本与旧版本无法共存），为避免卸载的不彻底（比如存在注册表残留项，会导致新版本无法安装），卸载完成后务必重启电脑，以便清理一些剩余文件！！！，重启后，重新运行OInstall.exe，如图所示，选择自己想要安装的套件，并选择语言，点击Install Office</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606084943.png"></p>
+<ol start="3">
+<li>进入安装界面，安装完成后，点击关闭按钮。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606090210.png"></p>
+<ol start="4">
+<li>回到OInstall界面，如图，按顺序操作，当出现第③步的时候，点击Activate Office进行激活</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606090806.png"></p>
+<ol start="5">
+<li>当出现Product activation successful提示，表示激活成功，关闭窗口。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606091135.png"></p>
+<ol start="6">
+<li>点击桌面左下角的开始，点击最近添加下的word（任意3件套），启动软件。进入引导界面，勾选不发送，点击接受，点击完成</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606091617.png"></p>
+<ol start="7">
+<li>登录自己的账号，建议用新账号登录（微软账号）。点击左下角的“帐户”，即可显示激活状态</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606092656.png"></p>
+<ol start="8">
+<li><p>如果激活状态显示的是Office 2016 xxxx版本，大家也不要慌。这是因为之前已经安装并激活过Office造成的，下面我们就来处理这个问题。</p>
+<ul>
+<li><p>以管理员身份运行Office Tool Plus.exe，进入界面后，有个弹窗，点击不，关闭。点击“激活”按钮</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606093908.png"></p>
+</li>
+<li><p>新窗口中，点击“许可证管理”，点击”安装许可证”后面的下拉列表，找到并点击“清除所有许可证”。出现警告窗口时点击“是”按钮，再点击“清空”按钮以完成清除。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606094602.png"></p>
+</li>
+<li><p>在选择产品下拉列表中找到“office 专业增强版2021-批量版-[ProPlus2021Volume]”，点击“安装许可证”，稍等便会安装成功，无需点击右上角的“激活”按钮！！！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606094952.png"></p>
+</li>
+<li><p>重新打开word，你会发现版本已恢复正常了</p>
+</li>
+</ul>
+</li>
+<li><p>激活完成后重新启动电脑，重启后按照第1步，将修改的ProgramFilesDir和ProgramW6432Dir的值，分别改回C:\Program Files，关闭窗口，重启电脑。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606100337.png"></p>
+</li>
+<li><p>重启后，依次打开G:\Microsoft Office 2021 Pro Plus LTSC\Microsoft Office\root\Office16（我的安装路径），（依次将3件套）鼠标右键选择发送到桌面快捷方式。此时桌面左下角的开始-&gt;最近添加下的3件套已失效，可将其删除（鼠标右键-&gt;更多-&gt;从列表中删除）。双击桌面的word快捷方式即可启动。至此完美解决Office占用C盘空间并抢先体验Office 2021 专业增强版。</p>
+</li>
+</ol>
+<h3 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h3><p>OK，今天就分享到这，希望今天的分享有助于大家的工作和学习！另外昨天对上期分享的《免费白嫖Office 365 E5》一文做了部分修改（公众号推文已无法修改），已发布到小黑 <a href="https://blackant-club.github.io/">博客</a> 上，感兴趣的朋友可以去看看。</p>]]></content>
+  </entry>
+  <entry>
+    <title>解锁Du盘1080P和倍速功能！</title>
+    <url>/posts/2661770721/</url>
+    <content><![CDATA[<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>前段时间阿里云盘搞得风生水起，小黑借此机会多注册了几个号作为备用，并且都已扩容5T+，最多的接近9T，百度网盘上的资源也陆续转到阿里云盘上了。可转眼快两个月了，网盘关键的分享功能依然没有开通，感觉大家的热情正一点一点的被浇灭。再说说一家独大的某Du盘，不管是充V1P的价格还是非V1p的尿性下载速度，多多少少总能恶心你一下。闲话少说，小黑今天给大家带来特殊版本！</p>
+<h3 id="教程："><a href="#教程：" class="headerlink" title="教程："></a>教程：</h3><ol>
+<li><p>软件已打包好，公众号内回复210621即可获取。该版本为安卓版，大家都知道，网盘上存的小电影或者各种视频教程，只有开Sv1p才可以看超清1080P和倍速功能，否则只能看流畅480p，今天这款神器就刚好解决这两个问题，可以说是学习爱好者的福音！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210621122945.jpg"></p>
+</li>
+<li><p>有朋友要问了，用手机看屏幕有点小，能不能投屏到电脑上看呢？答案是可以的（不支持win7），方法如下：</p>
+<ul>
+<li><p>按快捷键win+a，打开操作中心，点击“连接”，如图所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210620180919.png"></p>
+</li>
+<li><p>接着会跳转到新窗口，在窗口底部，可能会存在两种情况：</p>
+<ul>
+<li><p>只有一个按钮，出现这种情况是因为微软默认没有安装“无线显示器”，需要我们自行安装。安装方法：</p>
+<ol>
+<li>快捷键win+i，打开windows设置，点击“应用”进入应用面板</li>
+<li>点击右边栏的“可选功能”（浅色字体）</li>
+<li>点击“添加功能”</li>
+<li>在搜索栏输入“无线”，勾选“无线显示器”，点击“安装”，稍等即可安装成功</li>
+<li>安装完成后，必须重启电脑，否则依然不显示“投影到此电脑”按钮</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210620184411.png"></p>
+</li>
+<li><p>有两个按钮，点击“投影到此电脑”，进入下一步：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210620181853.png"></p>
+</li>
+</ul>
+</li>
+<li><p>点击下拉菜单，将④、⑤位置修改成如图的样子，其他选项保持默认，关闭窗口。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210620183523.png"></p>
+</li>
+<li><p>打开手机的设置，找到并点击“其他无线连接”（注意：不是WLAN），在无线传输下，将“手机投屏”打开（默认是关闭的），打开后会自动显示你的电脑的设备名称，点击设备名称，此时电脑上出现弹窗，如图，打开下拉菜单，选择“允许一次”或“始终允许”，点击确定即可。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210620194104.png"></p>
+</li>
+<li><p>此时，电脑屏幕会显示已准备好连接，但提示“无法在此设备上查看受保护的内容”，那怎么解决呢？</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210620210343.jpg"></p>
+<p>其实我们只需要关闭网络防火墙即可：</p>
+<ol>
+<li><p>快捷键win+i，打开windows设置-&gt;更新和安全-&gt;Windows 安全中心-&gt;病毒和威胁防护-&gt;点击左边栏的“防火墙和网络保护”-&gt;依次将右边栏的“专用网络”和“公用网络”关闭。（或者点击开始-&gt;设置-&gt;网络和Internet-&gt;左边栏的“状态”-&gt;右边栏下拉找到“windows防火墙”-&gt;依次将右边栏的“专用网络”和“公用网络”关闭。）</p>
+</li>
+<li><p>重点是：保证你手机的蓝牙是关闭的、保证你的手机热点是关闭的。投屏并不是通过wifi，而是“其他无线连接的形式”</p>
+</li>
+<li><p>防火墙虽然讨厌，但不得不承认还是有点作用的。不嫌麻烦的话，可把投屏软件添加到“允许应用通过防火墙”里，这样就不用把整个防火墙都关掉，具体方法如下：</p>
+<ul>
+<li><p>见下图，点击“允许应用通过防火墙”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210620223634.png"></p>
+</li>
+<li><p>点击“更改设置”，点击“允许其他应用”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210620224223.png"></p>
+</li>
+<li><p>点击“浏览”，将系统自带的投屏软件C:\Windows\SystemApps\Microsoft.PPIProjection_cw5n1h2txyewy\中的Reciever.exe添加进来</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210620224824.png"></p>
+</li>
+<li><p>添加到列表后，别忘了在专用和公用那里打勾，然后确定，现在投屏软件就可以通过防火墙了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210620225232.png"></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>配置系统服务问题：（备选方案，可忽略）</p>
+<p>控制面板-&gt;网络和 Internet-&gt;网络和共享中心-&gt;左边栏“媒体流式处理选项”-&gt;启用媒体流</p>
+<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210620214100.png"></p>
+</li>
+<li><p>修改几项后，我们重新操作一遍看看是不是可以投屏了。打开手机的设置，找到并点击“其他无线连接”，在无线传输下，将“手机投屏”打开，打开后会自动显示你的电脑的设备名称，点击设备名称，此时电脑上出现弹窗，打开下拉菜单，选择“允许一次”或“始终允许”，点击确定即可。接下来你就可以愉快的玩耍了！</p>
+</li>
+</ul>
+</li>
+<li><p>对于win7用户，可采用安装第三方APP的方式，来解决投屏问题（比如手机和电脑上都安装上“乐播投屏”，这个小黑以为大家准备好了，回复关键字即可获取）</p>
+</li>
+</ol>
+<h3 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h3><p>OK，今天就BB到这，希望今天的分享有利于大家的工作和学习！本号所发布的一切破解补丁、注册机和注册信息及软件的解密分析文章仅限用于学习和研究之目的；不得将上述内容用于商业或非法用途，否则，一切后果请用户自负。本号信息来自网络，版权争议与本号无关，请在24个小时之内彻底删除上述内容。如果您喜欢该程序，请支持正版软件，购买注册，得到更好的正版服务；如果有侵犯到您的权益，请在后台或者发送邮件联系本号删除，谢谢合作！</p>]]></content>
   </entry>
   <entry>
     <title>GitHub博客(NexT主题)优化篇</title>
@@ -870,7 +1006,7 @@
 <li><p>配置SSH Key</p>
 <ul>
 <li><p>创建SSH密钥：</p>
-<p>输入 ssh-keygen -t rsa -C “<a href="mailto:&#x72;&#x79;&#x61;&#110;&#108;&#x65;&#97;&#99;&#x6e;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;">&#x72;&#x79;&#x61;&#110;&#108;&#x65;&#97;&#99;&#x6e;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;</a>“ （需要换成你的注册邮箱地址），然后一路回车</p>
+<p>输入 ssh-keygen -t rsa -C “<a href="mailto:&#114;&#x79;&#97;&#x6e;&#x6c;&#x65;&#x61;&#x63;&#x6e;&#64;&#111;&#x75;&#116;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;">&#114;&#x79;&#97;&#x6e;&#x6c;&#x65;&#x61;&#x63;&#x6e;&#64;&#111;&#x75;&#116;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;</a>“ （需要换成你的注册邮箱地址），然后一路回车</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/20.png" alt="20"></p>
 </li>
 <li><p>添加密钥：</p>
@@ -884,7 +1020,7 @@
 </ul>
 <ul>
 <li><p>验证连接：</p>
-<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>回车（固定格式），如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：Hi blackant-club! You’ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！（设置GitHub密钥原因是：通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥和GitHub上面的公钥是否配对，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是合法的）</p>
+<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#x6d;</a>回车（固定格式），如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：Hi blackant-club! You’ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！（设置GitHub密钥原因是：通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥和GitHub上面的公钥是否配对，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是合法的）</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/23.png" alt="23"></p>
 </li>
 </ul>
@@ -894,7 +1030,7 @@
 <li><p>打开D:\Blog下的_config.yml文件（站点配置文件），下拉到底部，将原来的：</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/24.png" alt="24"></p>
 </li>
-<li><p>修改成：（注意：冒号后面有空格！格式为：<a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;</a>:blackant-club/blackant-club.github.io.git，关闭保存。</p>
+<li><p>修改成：（注意：冒号后面有空格！格式为：<a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>:blackant-club/blackant-club.github.io.git，关闭保存。</p>
 <p><img src="https://gitee.com/blackant-club/blogimage/raw/master/images/45.png" alt="45"></p>
 </li>
 <li><p>有的朋友可能找不到这个git@xxxxxx，只需点击网站左上角你的仓库，然后会跳转到新的页面，按照下图顺序操作即可复制</p>
@@ -1035,66 +1171,5 @@
 </li>
 </ol>
 <p>至此基于Hexo+GitHub搭建个人独立博客过程结束。目前来看，博客还相当简陋，下一步想进行一些美化，我很期待！希望这篇文章能给你一点点灵感与想法！</p>]]></content>
-  </entry>
-  <entry>
-    <title>抢先体验Office2021 ProPlus LTSC</title>
-    <url>/posts/2967912747/</url>
-    <content><![CDATA[<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>作为经典的办公软件，微软Office套件毫无疑问是行业第一。前期刚和大家分享了<a href="https://mp.weixin.qq.com/s/GjnQh_b9h0vLOpsEdReq4Q">免费白嫖Office 365 E5</a> ，今天带来office 2021 ProPlus LTSC专业增强版，该版本主要适用于喜欢一次性买断而不是按月订阅的Office 365用户。闲话少说，今天帮大家解决以下三个问题：</p>
-<ul>
-<li>如何将强制安装到C盘的软件，修改成可自定义路径（减少对C盘的占用）</li>
-<li>抢先体验office 2021 ProPlus LTSC</li>
-<li>解决安装完成后查看版本时，可能存在显示的版本与所安装版本不同的问题</li>
-</ul>
-<h3 id="教程："><a href="#教程：" class="headerlink" title="教程："></a>教程：</h3><ol>
-<li>在安装office之前，快捷键win键+r-&gt;输入regedit-&gt;回车-&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion-&gt;看右边栏-&gt;修改ProgramFilesDir的值和ProgramW6432Dir的值，分别将原来的C:\Program Files改为G:\Microsoft Office 2021 Pro Plus LTSC（我想要的安装位置）-&gt;关闭窗口-&gt;重启电脑</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606083829.png"></p>
-<ol start="2">
-<li>电脑重启后，将压缩包解压会获取到三个文件，注意：其中Office Tool Plus.exe是作为备用（用来解决安装完成后可能出现版本显示不一致的问题，比如安装的是2021版，显示的却是2016版）。打开解压后的Microsoft Office 2021 Pro Plus LTSC文件夹，双击OInstall.exe运行安装程序。安装之前请务必点击“Uninstall Office”进行卸载，卸载之前的版本（新版本与旧版本无法共存），为避免卸载的不彻底（比如存在注册表残留项，会导致新版本无法安装），卸载完成后务必重启电脑，以便清理一些剩余文件！！！，重启后，重新运行OInstall.exe，如图所示，选择自己想要安装的套件，并选择语言，点击Install Office</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606084943.png"></p>
-<ol start="3">
-<li>进入安装界面，安装完成后，点击关闭按钮。</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606090210.png"></p>
-<ol start="4">
-<li>回到OInstall界面，如图，按顺序操作，当出现第③步的时候，点击Activate Office进行激活</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606090806.png"></p>
-<ol start="5">
-<li>当出现Product activation successful提示，表示激活成功，关闭窗口。</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606091135.png"></p>
-<ol start="6">
-<li>点击桌面左下角的开始，点击最近添加下的word（任意3件套），启动软件。进入引导界面，勾选不发送，点击接受，点击完成</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606091617.png"></p>
-<ol start="7">
-<li>登录自己的账号，建议用新账号登录（微软账号）。点击左下角的“帐户”，即可显示激活状态</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606092656.png"></p>
-<ol start="8">
-<li><p>如果激活状态显示的是Office 2016 xxxx版本，大家也不要慌。这是因为之前已经安装并激活过Office造成的，下面我们就来处理这个问题。</p>
-<ul>
-<li><p>以管理员身份运行Office Tool Plus.exe，进入界面后，有个弹窗，点击不，关闭。点击“激活”按钮</p>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606093908.png"></p>
-</li>
-<li><p>新窗口中，点击“许可证管理”，点击”安装许可证”后面的下拉列表，找到并点击“清除所有许可证”。出现警告窗口时点击“是”按钮，再点击“清空”按钮以完成清除。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606094602.png"></p>
-</li>
-<li><p>在选择产品下拉列表中找到“office 专业增强版2021-批量版-[ProPlus2021Volume]”，点击“安装许可证”，稍等便会安装成功，无需点击右上角的“激活”按钮！！！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606094952.png"></p>
-</li>
-<li><p>重新打开word，你会发现版本已恢复正常了</p>
-</li>
-</ul>
-</li>
-<li><p>激活完成后重新启动电脑，重启后按照第1步，将修改的ProgramFilesDir和ProgramW6432Dir的值，分别改回C:\Program Files，关闭窗口，重启电脑。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/blackant-club/blogImage@main/img/20210606100337.png"></p>
-</li>
-<li><p>重启后，依次打开G:\Microsoft Office 2021 Pro Plus LTSC\Microsoft Office\root\Office16（我的安装路径），（依次将3件套）鼠标右键选择发送到桌面快捷方式。此时桌面左下角的开始-&gt;最近添加下的3件套已失效，可将其删除（鼠标右键-&gt;更多-&gt;从列表中删除）。双击桌面的word快捷方式即可启动。至此完美解决Office占用C盘空间并抢先体验Office 2021 专业增强版。</p>
-</li>
-</ol>
-<h3 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h3><p>OK，今天就分享到这，希望今天的分享有助于大家的工作和学习！另外昨天对上期分享的《免费白嫖Office 365 E5》一文做了部分修改（公众号推文已无法修改），已发布到小黑 <a href="https://blackant-club.github.io/">博客</a> 上，感兴趣的朋友可以去看看。</p>]]></content>
   </entry>
 </search>
